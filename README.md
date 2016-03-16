@@ -11,12 +11,28 @@ Alternatively, namespace and autoload it.
 
 ## Usage
 
+Basic usage includes auto saving, so you just modify the data and it saves!
+
 ```php
 <?php
-$config = new JSON('config.json');
-$cf =& $config->data;
+$JSON = new JSON('config.json');
+$config =& $JSON->data; // You could just do $config->data->name = ...
 
-$cf->name = 'dayjo';
-$cf->last_edited = time();
+$config->name = 'dayjo';
+$config->last_edited = time();
 ```
 
+## Options
+
+### Auto Save
+The optional second parameter to the JSON class allows you to turn off auto save, and make it so you have to run the save function manually for instance;
+
+```php
+<?php
+$JSON = new JSON('config.json', false);
+$config =& $JSON->data;
+
+$config->name = 'dayjo';
+
+$JSON->save();
+```

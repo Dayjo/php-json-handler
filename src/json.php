@@ -8,7 +8,7 @@ namespace Dayjo;
  * $myjson->data->name = 'dayjo';
  *
  * @author Dayjo
- * @link https://github.dom/Dayjo/php-json-handler
+ * @link https://github.com/Dayjo/php-json-handler
  *
  * // Done! it will write out to the file once the script is finished
  */

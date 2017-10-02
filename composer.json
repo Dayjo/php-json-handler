@@ -3,7 +3,7 @@
     "description": "Class for opening and writing to json files easily",
     "type": "library",
     "license": "MIT",
-    "version": "v1.0.5",
+    "version": "v1.0.4",
     "authors": [
         {
             "name": "Joel Day",

@@ -9,5 +9,8 @@
             "email": "git@dayjo.me"
         }
     ],
-    "require": {}
+    "require": {},
+    "psr-4": {
+           "Dayjo\\": "/"
+    }
 }

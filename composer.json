@@ -3,7 +3,7 @@
     "description": "Class for opening and writing to json files easily",
     "type": "library",
     "license": "MIT",
-    "version": "v1.0.2",
+    "version": "v1.0.3",
     "authors": [
         {
             "name": "Joel Day",
@@ -12,6 +12,6 @@
     ],
     "require": {},
     "psr-4": {
-           "Dayjo\\": "/"
+           "Dayjo\\": "src/"
     }
 }

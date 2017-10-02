@@ -1,4 +1,6 @@
 <?php
+namespace Dayjo;
+
 /**
  * Class to read and write to json files
  * @example
@@ -10,7 +12,8 @@
  *
  * // Done! it will write out to the file once the script is finished
  */
-class JSON {
+class JSON
+{
     private $fname;
     public $data;
     private $autosave = true;
@@ -20,7 +23,8 @@ class JSON {
      * @param string $fname    The file name to load in
      * @param boolean $autosave Whether or not to automatically save any changes made to the object
      */
-    public function __construct($fname, $autosave = true) {
+    public function __construct($fname, $autosave = true)
+    {
         $this->autosave = $autosave;
         $this->load($fname);
     }
@@ -28,13 +32,13 @@ class JSON {
     /**
      * Loads in the requested file name, grabs the content and sets the json object
      */
-    public  function load($fname){
+    public function load($fname)
+    {
         $this->fname = $fname;
-        if ( file_exists($this->fname) ) {
+        if (file_exists($this->fname)) {
             $contents = file_get_contents($this->fname);
             $this->data = json_decode($contents);
-        }
-        else {
+        } else {
             $this->data = json_decode([]);
         }
 
@@ -45,17 +49,18 @@ class JSON {
     /**
      * Writes out the modified object back to the file
      */
-    public function save(){
+    public function save()
+    {
         return file_put_contents($this->fname, json_encode($this->data));
     }
 
     /**
      * Auto saving
      */
-    public function __destruct(){
-        if ( $this->autosave ) {
+    public function __destruct()
+    {
+        if ($this->autosave) {
             $this->save();
         }
     }
 }
-

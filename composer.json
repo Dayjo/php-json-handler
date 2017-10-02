@@ -1,0 +1,13 @@
+{
+    "name": "dayjo/php-json-handler",
+    "description": "Class for opening and writing to json files easily",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joel Day",
+            "email": "git@dayjo.me"
+        }
+    ],
+    "require": {}
+}

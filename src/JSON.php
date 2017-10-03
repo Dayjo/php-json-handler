@@ -51,6 +51,16 @@ class JSON
      */
     public function save()
     {
+        // Grab the directory and create it if needed
+        $info = pathinfo($this->fname);
+        $dir  = $info['dirname'];
+
+        if (!is_dir($dir)) {
+            // dir doesn't exist, make it
+          mkdir($dir, '0777', true);
+        }
+
+
         return file_put_contents($this->fname, json_encode($this->data));
     }
 

@@ -9,7 +9,7 @@ namespace Dayjo;
  *
  * @author Dayjo
  * @link https://github.com/Dayjo/php-json-handler
- *
+ * @version 1.0.11
  * // Done! it will write out to the file once the script is finished
  */
 class JSON

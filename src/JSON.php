@@ -39,7 +39,7 @@ class JSON
             $contents = file_get_contents($this->fname);
             $this->data = json_decode($contents);
         } else {
-            $this->data = json_decode([]);
+            $this->data = [];
         }
 
         $data =& $this->data;

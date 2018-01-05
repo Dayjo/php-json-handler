@@ -1,13 +1,24 @@
 # PHP JSON Handler
 Class to open, modify and write json objects in files.
 
-## Installation 
+## Installation (without composer)
 Just include the `json.php` file.
 ```php
 require 'src/json.php';
 ```
 
 Alternatively, namespace and autoload it.
+
+## Installation (with composer)
+```shell
+composer require dayjo/php-json-handler
+```
+
+Then use;
+
+```php
+use Dayjo\JSON;
+```
 
 ## Usage
 

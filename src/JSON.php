@@ -39,7 +39,7 @@ class JSON
             $contents = file_get_contents($this->fname);
             $this->data = json_decode($contents);
         } else {
-            $this->data = json_decode("{}");
+            $this->data = json_decode("[]");
         }
 
         $data =& $this->data;
@@ -57,7 +57,7 @@ class JSON
 
         if (!is_dir($dir)) {
             // dir doesn't exist, make it
-          mkdir($dir, '0777', true);
+          mkdir($dir, 0777, true);
         }
 
 
